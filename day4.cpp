@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+void reverse (int arr[],int n){
+    int left=0;
+    int right=n-1;
+    while(left<right){
+        swap(arr[left],arr[right]);
+        left++;
+        right--;
+    }
+}
+int main(){
+    int n;
+    cout<<"enter the size of the array: ";
+    cin>>n;
+    int arr[n];
+    cout<<"start entering the elements in the array: ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    reverse(arr,n);
+    cout<<"arrray after reversing: ";
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
